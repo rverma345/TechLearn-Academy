@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Trainers</h2>
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Expertise</th>
+    <th>Email</th>
+</tr>
+{% for t in trainers %}
+<tr>
+    <td>{{ t.full_name }}</td>
+    <td>{{ t.expertise }}</td>
+    <td>{{ t.email }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
